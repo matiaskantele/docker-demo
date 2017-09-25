@@ -1,17 +1,40 @@
 # Docker Demo
 
-Demo project for Dockerized Clojure API
+Demo project for Dockerized Clojure REST API
 
 ## Installation
 
-Clone the repo `git clone git@github.com:matiisi/docker-demo.git`
+Clone the repo
+```Shell
+$ git clone git@github.com:matiisi/docker-demo.git
+```
 
 ## Usage
 
-`lein run` - run the app
+```Shell
+$ lein test # run tests
 
-    $ java -jar .-0.1.0-standalone.jar [args]
+$ lein run # run locally
+```
 
-## Options
+### Docker
 
-Program can take input from an external .edn file.
+```Shell
+$ docker build -t "docker-demo:0.1.0" . # build container image with name and tag
+
+$ docker images # list container images
+
+$ docker run --name demodemo -it docker-demo:0.1.0 # run container image
+
+$ docker ps -a # list all containers
+```
+
+### Cleanup
+
+```Shell
+$ docker rm demodemo # remove container
+
+$ docker rmi docker-demo:0.1.0 # remove container image
+
+$ docker rmi anapsix/alpine-java:8u144b01_jdk # remove base image for container
+```
