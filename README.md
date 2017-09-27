@@ -5,13 +5,13 @@ Demo project for Dockerized Clojure REST API
 ## Installation
 
 Clone the repo
-```Shell
+```zsh
 $ git clone git@github.com:matiisi/docker-demo.git
 ```
 
 ## Usage
 
-```Shell
+```zsh
 $ lein test # run tests
 
 $ lein run # run locally
@@ -19,7 +19,7 @@ $ lein run # run locally
 
 ### Docker
 
-```Shell
+```zsh
 $ docker build -t "docker-demo:0.1.0" . # build container image with name and tag
 
 $ docker images # list container images
@@ -31,7 +31,7 @@ $ docker ps -a # list all containers
 
 ### Cleanup
 
-```Shell
+```zsh
 $ docker rm demodemo # remove container
 
 $ docker rmi docker-demo:0.1.0 # remove container image
